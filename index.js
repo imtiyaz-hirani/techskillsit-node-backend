@@ -13,20 +13,7 @@ app.use(cors())
 dbConnect();
  
 /* create get for / */
-app.get("/",  (req,res)=>{ res.send( {value: add(10,2)}) });
-
-/* Api for calling Users */
-app.get("/users", async (req,res)=>{
-    try{
-        let response = await fetch('https://jsonplaceholder.typicode.com/users')
-        let data = await response.json();
-        res.send(data);
-    }
-    catch(err){
-        res.send(400,{"msg": err.msg})
-    }
-
-});
+app.get("/",  (req,res)=>{ res.send( 'Api Working')});
 
 //API Middleware
 app.use(express.json({
@@ -44,3 +31,5 @@ app.use('/api/subcourse', require('./routes/api/subcourse'));
 /* Set up port and start the server */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{ console.log('app working..') }); 
+// Export the Express API
+module.exports = app
