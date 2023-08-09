@@ -35,7 +35,10 @@ app.use(express.json({
 
 //define routes
 app.use('/api/employee', require('./routes/api/employee'));
+app.use('/api/course', require('./routes/api/course'));
+app.use('/api/category', require('./routes/api/category'));
 app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/subcourse', require('./routes/api/subcourse'));
 
 
 /* Set up port and start the server */
