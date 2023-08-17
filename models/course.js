@@ -2,25 +2,43 @@ const mongoose = require('mongoose');
 
 const CourseSchema = new mongoose.Schema({
      
-    cname: {
+    name: { 
         type: String
     },
-    ctrainer: {
+    description: {
         type: String
     },
-    cfee:{
+    shortDescription:{
+        type: String
+    },
+    featured:{
+        type: Boolean
+    },
+     trainerId: {
+        type: Number
+    },
+     fee:{
         type: Number
     },
     cfeezoom:{
         type: Number
     },
-    cdiscount:{
-        type: Number
-    },
-    cimage:{
+    introVideoCode:{
         type: String
     },
-    categoryId:{
+    keywords:{
+        type: String
+    },
+    technicalWeightage:{
+        type: String
+    },
+    type:{
+        type: String
+    },
+    sequence:{
+        type: Number
+    },
+    trackId:{
         type: String
     }
 });

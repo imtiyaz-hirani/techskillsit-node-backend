@@ -5,12 +5,22 @@ const EnrollTrackSchema = new mongoose.Schema({
     trackId: {
         type: String
     },
-    studentID: {
+    userId: {
         type: Number
     },
     enrollDate:{
-        type: Date 
+        type: Date,
+        default: Date.now 
+    },
+    expiryDate:{
+        type: Date
+    },
+    feePaid:{
+        type: Number
+    },
+    coupon:{
+        type: String
     }
 });
 
-module.exports = EnrollTrack = mongoose.model('subCourse',EnrollTrackSchema);
+module.exports = EnrollTrack = mongoose.model('EnrollTrack',EnrollTrackSchema);

@@ -2,21 +2,27 @@ const mongoose = require('mongoose');
 
 const VideoSchema = new mongoose.Schema({
      
-    vtitle: {
+    title: {
         type: String
     },
-    vplaylength: {
+    playlength: {
         type: Number
     },
-    vserialno:{
-        type: Number
+    shortDescription:{
+        type: String
+    },
+    sequence:{
+        type: String
     },
     moduleId:{
         type: Number
     },
-    vcode:{
+    code:{
+        type: Number
+    },
+    hdcode:{
         type: Number
     }
 });
 
-module.exports = Video = mongoose.model('video',VideoSchema);
+module.exports = Video = mongoose.model('Video',VideoSchema);
