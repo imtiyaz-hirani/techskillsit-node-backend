@@ -24,8 +24,7 @@ app.use('/api/track', require('./routes/api/track'));
 app.use('/api/course', require('./routes/api/course'));
 app.use('/api/module', require('./routes/api/module'));
 app.use('/api/video', require('./routes/api/video'));
-
-app.use('/api/auth', require('./routes/api/auth'));
+//app.use('/api/auth', require('./routes/api/auth'));
  
 
 /* Set up port and start the server */
