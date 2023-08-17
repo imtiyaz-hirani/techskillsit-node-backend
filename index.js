@@ -1,8 +1,6 @@
 /* Set up Express Server */
 const express = require('express');
-const { add } = require('./functions');
-const fetch = require('node-fetch');
-const { dbConnect } = require('./config/db');
+ const { dbConnect } = require('./config/db');
 const cors = require('cors');
 
 const app = express();
@@ -19,7 +17,7 @@ app.get("/",  (req,res)=>{ res.send( 'Api Working')});
 app.use(express.json({
     extended: false
 }));
-
+ 
 //define routes
 app.use('/api/listing', require('./routes/api/listing'));
 app.use('/api/track', require('./routes/api/track'));
