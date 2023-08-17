@@ -2,18 +2,16 @@ const mongoose = require('mongoose');
 
 const ModuleSchema = new mongoose.Schema({
      
-    mtitle: {
+    name: {
         type: String
     },
-    mpriority: {
+    sequence: {
         type: String
     },
-    mserialno:{
-        type: Number
-    },
-    subCourseId:{
+     
+    courseId:{
         type: Number
     } 
 });
 
-module.exports = Module = mongoose.model('module',ModuleSchema);
+module.exports = Module = mongoose.model('Module',ModuleSchema);

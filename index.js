@@ -21,12 +21,14 @@ app.use(express.json({
 }));
 
 //define routes
-app.use('/api/employee', require('./routes/api/employee'));
+app.use('/api/listing', require('./routes/api/listing'));
+app.use('/api/track', require('./routes/api/track'));
 app.use('/api/course', require('./routes/api/course'));
-app.use('/api/category', require('./routes/api/category'));
-app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/subcourse', require('./routes/api/subcourse'));
+app.use('/api/module', require('./routes/api/module'));
+app.use('/api/video', require('./routes/api/video'));
 
+app.use('/api/auth', require('./routes/api/auth'));
+ 
 
 /* Set up port and start the server */
 const PORT = process.env.PORT || 5000;

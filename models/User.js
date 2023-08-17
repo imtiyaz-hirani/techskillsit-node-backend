@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-     
-    email: {
+    name: {
+        type: String
+    },
+    username: {
         type: String
     },
     password: {
@@ -11,12 +13,43 @@ const UserSchema = new mongoose.Schema({
     role:{
         type: String
     },
-    status:{
+    email: {
         type: String
     },
-    signupdate:{
+    enabled:{
+        type: Boolean
+    },
+    signUpDate:{
         type: Date
+    },
+    profession:{
+        type: String
+    },
+    contact:{
+        type: String
+    },
+    whatsapp:{
+        type: String
+    },
+    address: {
+        type: String
+    },
+    city: {
+        type: String
+    },
+    companyId:{
+        type: String
+    },
+    emailVerified: {
+        type: Boolean
+    },
+    contactVerified: {
+        type: Boolean
+    },
+    whatsappVerified: {
+        type: Boolean
     }
+
 });
 
-module.exports = User = mongoose.model('user',UserSchema);
+module.exports = User = mongoose.model('User',UserSchema);
